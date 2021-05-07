@@ -1,0 +1,15 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.defaultFormatter": "vscode.configuration-editing",
+    "files.autoSaveDelay": 10,
+    "python.pythonPath": "C:\\Python38\\python.exe",
+    "python.autoComplete.extraPaths": [
+    "${workspaceFolder}/customModule"
+  ],
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/customModule"
+  ],
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true
+
+}
