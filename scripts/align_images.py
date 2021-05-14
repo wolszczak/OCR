@@ -17,8 +17,8 @@ def alignImages(image, template, maxFeatures=50000, keepPercent=0.3, debug=False
     matches = sorted(matches, key=lambda x: x.distance)
 
     keep = int(len(matches) * keepPercent)
-    print(len(matches))
-    print(keep)
+    # print(len(matches))
+    # print(keep)
     matches = matches[:keep]
 
     # if debug:
@@ -38,7 +38,7 @@ def alignImages(image, template, maxFeatures=50000, keepPercent=0.3, debug=False
     (H, mask) = cv2.findHomography(ptsA, ptsB, method=cv2.RANSAC)
 
     (h, w) = template.shape[:2]
-    aligned = cv2.warpPerspective(image, H, (w, h))
+    aligned = cv2.warpPerspective(imageGray, H, (w, h))
 
     if debug:
         aligned = imutils.resize(aligned, height=640, width=512)

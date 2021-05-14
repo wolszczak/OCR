@@ -22,7 +22,6 @@ model.add(tf.keras.layers.Conv2D(filters=64,kernel_size=(3,3),activation=tf.nn.r
 model.add(tf.keras.layers.Conv2D(filters=128,kernel_size=(3,3),activation=tf.nn.relu,padding="same"))
 model.add(tf.keras.layers.MaxPooling2D(pool_size=(2,2),padding="same"))
 model.add(tf.keras.layers.Flatten())
-
 model.add(tf.keras.layers.Dense(units=10, activation=tf.nn.softmax))
 
 model.compile(optimizer='adam',loss='sparse_categorical_crossentropy',metrics=['accuracy'])
